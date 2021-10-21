@@ -1,0 +1,48 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title }}</h1>
+
+<div class="py-20 row">
+    <div class="col-4">
+        <img src="{{ image }}" alt="{{ title }}" width="200" height="200">
+    </div>
+    <div class="col">
+        <section>
+            <p><strong>Owner:</strong> {{owner}}</p>
+            <p><strong>Agent:</strong> {{agent}}</p>
+            <p><strong>Tenants:</strong> {% if tenant %}{{tenant}} {%else%} No Tenant {% endif %}</p>
+        </section>
+        <h3 class="text-center">
+            Properties Details
+        </h3>
+        <section>
+            <p><strong>Price:</strong> {{price}}</p>
+            <p><strong>State:</strong> {{state}}</p>
+            <p><strong>No of bedrooms:</strong> {{bedroom}}</p>
+            <p><strong>Status:</strong> {{status}}</p>
+        </section>
+        <h3 class="text-center">
+            Description
+        </h3>
+        <section>
+            <p><strong>Address:</strong> {{ address }}</p>
+        </section>
+        <h3 class="text-center">
+            Property images
+        </h3>
+        <section>
+            <p>{{ description }}</p>
+        </section>
+        <button class="btn btn-primary">
+            Make Purchase
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript" src="/assets/js/checkout.min.js"></script>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

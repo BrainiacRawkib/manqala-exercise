@@ -1,0 +1,26 @@
+<!--<div>-->
+<!--	<a href="{{ doc.route }}">{{ doc.email or doc.name }}</a>-->
+<!--</div>-->
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="card">
+				<div class="card-header text-center">
+					{{doc.username}}
+				</div>
+				<div class="card-body">
+					First Name: {{doc.first_name}} <br>
+					Last Name: {{doc.last_name}} <br>
+					Contact: {{doc.contact}}
+				</div>
+				<div class="card-footer text-center">
+					<a href="{{ doc.route }}" class="text-decoration-none">
+						See details...
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+</div>
+<!-- this is a sample default list template -->

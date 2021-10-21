@@ -1,0 +1,26 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h3>Tenant Details</h3>
+<div class="py-20 row">
+    <div class="col">
+        <h2>Username: {{ username }}</h2>
+        <div>
+            <p><strong>First name:</strong> {{first_name}}</p>
+            <p><strong>Last name:</strong> {{last_name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Contact:</strong> {{contact}}</p>
+            <p><strong>Agent in charge:</strong> {{agent}}</p>
+            <p>
+                <strong>Property:</strong>
+                {% if property %}
+                    {{property}}
+                {% else %}
+                    Still searching
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-- this is a sample default web page template -->
